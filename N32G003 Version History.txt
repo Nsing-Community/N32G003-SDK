@@ -1,0 +1,55 @@
+﻿Nations.N32G003_Library.1.2.0：
+1. 修改EXTI demo中断函数标志位改为获取flag标志
+2. 修改SPI FLASH demo中，写字节发送数据后，读数据增加前，增加TE/BUSY标志位查询
+3. 优化UART溢出中断问题
+4. 优化I2C通信，添加自恢复功能
+5. 修改I2C demo中i2c_master_recv函数接收2个字节后清除ACKPOS位
+6. 修改SDK中HCLK名称为SYSCLK
+7. 删除SDK DBG_STOP函数调用
+8. 在TimeBasic6_wakeup demo中，更新中断处理函数，判断EXTI_GetStatusFlag(EXTI_LINE9) != RESET标志位。
+
+Nations.N32G003_Library.1.1.0：
+1. 修改Flash_One_Page_Erase函数增加地址判断
+2. 修改ADC demo中用ENDCA代替ENDC使用，并增加8个ADC_CLK延时；
+3. 修改IWDG demo，使用BSP里面的log.c文件
+4. 优化UART驱动的波特率计算方式
+5. 优化各模块例程中的while循环及错误处理
+6. 更新RCC驱动的时钟获取函数
+
+Nations.N32G003_Library.1.0.1：
+1. FLASH USER3 添加LVRRSTEN功能
+2. GPIO添加GPIO_AF8_UART2: PA9复用为UART2_RX
+3. SPI例程修改BaudRatePres和GPIO引脚
+4. 添加IAR例程
+5. UART例程修改RX GPIO模式 
+
+Nations.N32G003_Library.1.0.0：
+初始版本
+-------------------------------------------------------
+Nations.N32G003_Library.1.2.0：
+1. Modify the EXTI demo to change the interrupt function flag to obtain the flag status.
+2. Modify the SPI FLASH demo to add TE/BUSY flag query before reading data after sending data in the write byte operation.
+3. Optimize the UART overflow interrupt issue.
+4. Optimize I2C communication and add a self-recovery function.
+5. Modify the i2c_master_recv function in the I2C demo to clear the ACKPOS bit after receiving two bytes.
+6. Rename HCLK to SYSCLK in the SDK.
+7. Remove the DBG_STOP function call from the SDK.
+8. In the TimeBasic6_wakeup demo, update the interrupt handler to check the EXTI_GetStatusFlag(EXTI_LINE9) != RESET flag.
+
+Nations.N32G003_Library.1.1.0：
+1. Modify Flash_One_Page_Erase funtion to add address judgment
+2. Modify ADC demo, use ENDCA flag replace ENDC flag, and add 8 ADC_CLK delay；
+3. Modify IWDG demo，USB log.c file in BSP
+4. Optimize the baud rate calculation of the UART driver
+5. Optimize the while loop and error handling in each module routine.
+6. Update the clock acquisition function of RCC driver.
+
+Nations.N32G003_Library.1.0.1：
+1. FLASH USER3 LVRRSTEN funtions modify
+2. GPIO add GPIO_AF8_UART2: PA9 as UART2_RX
+3. SPI demo modified BaudRatePres and GPIO pins
+4. Adds IAR demo
+5. UART demo modified RX GPIO mode 
+
+Nations.N32G003_Library.1.0.0：
+Initial release
